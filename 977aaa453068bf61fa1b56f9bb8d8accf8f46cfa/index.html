@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .content-box {
+      flex: 1;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;  /* Center-align the content */
+    }
+
+    .premium-heading {
+      background-color: #001F3F; /* Deep blue for heading */
+      color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .button-container {
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .main-button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .main-button:hover {
+      background-color: #555;
+    }
+
+    .nested-buttons {
+      display: none;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .nested-button {
+      background-color: #ddd;
+      color: #333;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .nested-button:hover {
+      background-color: #ccc;
+    }
+
+    .nested-box {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .nested-link {
+      display: block;
+      margin: 5px;
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .home-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home-button {
+      background-color: transparent;
+      color: #4CAF50; /* Green */
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .home-button:hover {
+      color: #45a049;
+    }
+
+    .footer {
+      padding: 10px;
+      background-color: #FFD700; /* Subtle gold for footer */
+      color: #333;
+      border-radius: 5px;
+      text-align: center;  /* Center-align the content within the footer */
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;  /* Center-align the content within the footer */
+    }
+  </style>
+</head>
+<body>
+<div class="content-box">
+<div class="premium-heading">
+  <h1>Physics</h1>
+</div>
+
+<!-- MECHANICS -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(1)">MECHANICS</button>
+  
+  <div class="nested-buttons" id="nestedButtons1">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 0)">
+      1 UNITS, PHYSICAL QUANTITIES AND VECTORS
+    </button>
+
+    <div class="nested-box" id="nestedBox1_0">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/1.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-1.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 1)">
+      2 MOTION ALONG A STRAIGHT LINE
+    </button>
+
+    <div class="nested-box" id="nestedBox1_1">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/2.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-2.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 2)">
+      3 MOTION IN TWO OR THREE DIMENSIONS
+    </button>
+
+    <div class="nested-box" id="nestedBox1_2">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/3.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-3.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 3)">
+      4 NEWTON’S LAWS OF MOTION
+    </button>
+
+    <div class="nested-box" id="nestedBox1_3">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/4.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-4.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 4)">
+      5 APPLYING NEWTON’S LAWS
+    </button>
+
+    <div class="nested-box" id="nestedBox1_4">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/5.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-5.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 5)">
+      6 WORK AND KINETIC ENERGY
+    </button>
+
+    <div class="nested-box" id="nestedBox1_5">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/6.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-6.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 6)">
+      7 POTENTIAL ENERGY AND ENERGY CONSERVATION
+    </button>
+
+    <div class="nested-box" id="nestedBox1_6">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/7.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-7.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 7)">
+      8 MOMENTUM, IMPULSE AND COLLISIONS
+    </button>
+
+    <div class="nested-box" id="nestedBox1_7">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/8.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-8.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 8)">
+      9 ROTATION OF RIGID BODIES
+    </button>
+
+    <div class="nested-box" id="nestedBox1_8">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/9.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-9.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 9)">
+      10 DYNAMICS OF ROTATIONAL MOTION
+    </button>
+
+    <div class="nested-box" id="nestedBox1_9">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/10.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-10.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 10)">
+      11 EQUILIBRIUM AND ELASTICITY
+    </button>
+
+    <div class="nested-box" id="nestedBox1_10">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/11.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-11.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 11)">
+      12 FLUID MECHANICS
+    </button>
+
+    <div class="nested-box" id="nestedBox1_11">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/12.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-12.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 12)">
+      13 GRAVITATION
+    </button>
+
+    <div class="nested-box" id="nestedBox1_12">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/13.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-13.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 13)">
+      14 PERIODIC MOTION
+    </button>
+
+    <div class="nested-box" id="nestedBox1_13">
+
+      <a class="nested-link" href="FOLDER/MECHANICS/14.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MECHANICS/ch-14.pdf" target="_blank">chapter</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- WAVES -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(2)">WAVES</button>
+  
+  <div class="nested-buttons" id="nestedButtons2">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(2, 0)">
+      15 MECHANICAL WAVES
+    </button>
+
+    <div class="nested-box" id="nestedBox2_0">
+
+      <a class="nested-link" href="FOLDER/WAVES/15.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/WAVES/ch-15.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(2, 1)">
+      16 SOUND AND HEARING
+    </button>
+
+    <div class="nested-box" id="nestedBox2_1">
+
+      <a class="nested-link" href="FOLDER/WAVES/16.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/WAVES/ch-16.pdf" target="_blank">chapter</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- THERMODYNAMICS -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(3)">THERMODYNAMICS</button>
+  
+  <div class="nested-buttons" id="nestedButtons3">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(3, 0)">
+      17 TEMPERATURE AND HEAT
+    </button>
+
+    <div class="nested-box" id="nestedBox3_0">
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/17.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/ch-17.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(3, 1)">
+      18 THERMAL PROPERTIES OF MATTER
+    </button>
+
+    <div class="nested-box" id="nestedBox3_1">
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/18.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/ch-18.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(3, 2)">
+      19 THE FIRST LAW OF THERMODYNAMICS
+    </button>
+
+    <div class="nested-box" id="nestedBox3_2">
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/19.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/ch-19.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(3, 3)">
+      20 THE SECOND LAW OF THERMODYNAMICS
+    </button>
+
+    <div class="nested-box" id="nestedBox3_3">
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/20.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/THERMODYNAMICS/ch-20.pdf" target="_blank">chapter</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ELECTROMAGNETISM -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(4)">ELECTROMAGNETISM</button>
+  
+  <div class="nested-buttons" id="nestedButtons4">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 0)">
+      21 ELECTRIC CHARGE AND ELECTRIC FIELD
+    </button>
+
+    <div class="nested-box" id="nestedBox4_0">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/21.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-21.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 1)">
+      22 GAUSS’S LAW
+    </button>
+
+    <div class="nested-box" id="nestedBox4_1">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/22.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-22.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 2)">
+      23 ELECTRIC POTENTIAL
+    </button>
+
+    <div class="nested-box" id="nestedBox4_2">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/23.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-23.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 3)">
+      24 CAPACITANCE AND DIELECTRICS
+    </button>
+
+    <div class="nested-box" id="nestedBox4_3">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/24.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-24.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 4)">
+      25 CURRENT, RESISTANCE AND ELECTROMOTIVE FORCE
+    </button>
+
+    <div class="nested-box" id="nestedBox4_4">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/25.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-25.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 5)">
+      26 DIRECT-CURRENT CIRCUITS
+    </button>
+
+    <div class="nested-box" id="nestedBox4_5">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/26.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-26.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 6)">
+      27 MAGNETIC FIELD AND MAGNETIC FORCES
+    </button>
+
+    <div class="nested-box" id="nestedBox4_6">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/27.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-27.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 7)">
+      28 SOURCES OF MAGNETIC FIELD
+    </button>
+
+    <div class="nested-box" id="nestedBox4_7">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/28.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-28.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 8)">
+      29 ELECTROMAGNETIC INDUCTION
+    </button>
+
+    <div class="nested-box" id="nestedBox4_8">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/29.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-29.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 9)">
+      30 INDUCTANCE
+    </button>
+
+    <div class="nested-box" id="nestedBox4_9">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/30.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-30.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 10)">
+      31 ALTERNATING CURRENT
+    </button>
+
+    <div class="nested-box" id="nestedBox4_10">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/31.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-31.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(4, 11)">
+      32 ELECTROMAGNETIC WAVES
+    </button>
+
+    <div class="nested-box" id="nestedBox4_11">
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/32.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/ELECTROMAGNETISM/ch-32.pdf" target="_blank">chapter</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- OPTICS -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(5)">OPTICS</button>
+  
+  <div class="nested-buttons" id="nestedButtons5">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(5, 0)">
+      33 THE NATURE AND PROPAGATION OF LIGHT
+    </button>
+
+    <div class="nested-box" id="nestedBox5_0">
+
+      <a class="nested-link" href="FOLDER/OPTICS/33.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/OPTICS/ch-33.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(5, 1)">
+      34 GEOMETRIC OPTICS
+    </button>
+
+    <div class="nested-box" id="nestedBox5_1">
+
+      <a class="nested-link" href="FOLDER/OPTICS/34.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/OPTICS/ch-34.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(5, 2)">
+      35 INTERFERENCE
+    </button>
+
+    <div class="nested-box" id="nestedBox5_2">
+
+      <a class="nested-link" href="FOLDER/OPTICS/35.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/OPTICS/ch-35.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(5, 3)">
+      36 DIFFRACTION
+    </button>
+
+    <div class="nested-box" id="nestedBox5_3">
+
+      <a class="nested-link" href="FOLDER/OPTICS/36.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/OPTICS/ch-36.pdf" target="_blank">chapter</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- MODERN PHYSICS -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(6)">MODERN PHYSICS</button>
+  
+  <div class="nested-buttons" id="nestedButtons6">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 0)">
+      37 RELATIVITY
+    </button>
+
+    <div class="nested-box" id="nestedBox6_0">
+
+      <a class="nested-link" href="FOLDER/MODERN/37.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-37.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 1)">
+      38 PHOTONS: LIGHT WAVES BEHAVING AS PARTICLES
+    </button>
+
+    <div class="nested-box" id="nestedBox6_1">
+
+      <a class="nested-link" href="FOLDER/MODERN/38.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-38.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 2)">
+      39 PARTICLES BEHAVING AS WAVES
+    </button>
+
+    <div class="nested-box" id="nestedBox6_2">
+
+      <a class="nested-link" href="FOLDER/MODERN/39.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-39.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 3)">
+      40 QUANTUM MECHANICS I: WAVE FUNCTIONS
+    </button>
+
+    <div class="nested-box" id="nestedBox6_3">
+
+      <a class="nested-link" href="FOLDER/MODERN/40.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-40.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 4)">
+      41 QUANTUM MECHANICS II:ATOMIC STRUCTURE
+    </button>
+
+    <div class="nested-box" id="nestedBox6_4">
+
+      <a class="nested-link" href="FOLDER/MODERN/41.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-41.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 5)">
+      42 MOLECULES AND CONDENSED MATTER
+    </button>
+
+    <div class="nested-box" id="nestedBox6_5">
+
+      <a class="nested-link" href="FOLDER/MODERN/42.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-42.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 6)">
+      43 NUCLEAR PHYSICS
+    </button>
+
+    <div class="nested-box" id="nestedBox6_6">
+
+      <a class="nested-link" href="FOLDER/MODERN/43.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-43.pdf" target="_blank">chapter</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(6, 7)">
+      44 PARTICLE PHYSICS AND COSMOLOGY
+    </button>
+
+    <div class="nested-box" id="nestedBox6_7">
+
+      <a class="nested-link" href="FOLDER/MODERN/44.pdf" target="_blank">summary</a>
+
+      <a class="nested-link" href="FOLDER/MODERN/ch-44.pdf" target="_blank">chapter</a>
+
+    </div>
+
+  </div>
+</div>
+
+</div> <!-- Close the content-box div -->
+<div class="home-container">
+  <button class="home-button" onclick="goToHome()">🏠 Home</button>
+</div>
+<div class="footer">
+  <div class="footer-content">
+    <p class="credit">&#169; 2023 design by <a href="https://rajeshphy.github.io" target="_blank">Rajesh Kumar</a></p>
+  </div>
+</div>
+
+<script>
+  function toggleNestedButtons(buttonNumber) {
+    var nestedButtons = document.getElementById('nestedButtons' + buttonNumber);
+
+    // Toggle the display property
+    if (nestedButtons.style.display === 'none') {
+      nestedButtons.style.display = 'block';
+    } else {
+      nestedButtons.style.display = 'none';
+    }
+  }
+
+  function toggleNestedBox(mainButton, nestedButton) {
+    var nestedBox = document.getElementById('nestedBox' + mainButton + '_' + nestedButton);
+
+    // Toggle the display property
+    if (nestedBox.style.display === 'none') {
+      nestedBox.style.display = 'block';
+    } else {
+      nestedBox.style.display = 'none';
+    }
+  }
+
+  function goToHome() {
+    // Add your logic to navigate to the home page or perform any desired action
+    // For example, you can use window.location.href to navigate to a specific URL
+    window.location.href = 'index.html';  // Replace '/home' with the actual URL of your home page
+  }
+</script>
+
+</body>
+</html>

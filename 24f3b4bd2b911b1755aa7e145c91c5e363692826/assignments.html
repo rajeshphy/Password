@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Course Website: Lectures</title>
+  <link rel="stylesheet" href="/_css/main.css">
+  <link rel="canonical" href="http://course-website.svmiller.com/lectures/">
+  <link rel="alternate" type="application/rss+xml" title="Course Website" href="http://course-website.svmiller.com/feed.xml" />
+
+<style>
+  
+img {
+
+object-fit: contain;
+}
+  
+  
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: fit-content;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+
+</head>
+
+
+  <body>
+
+    <h1 class="post-title">Assignments</h1>
+  
+<p>
+Click on the button below to see the assignments.
+</p>
+
+<p><strong>Module I:</strong></p>
+
+<button class="collapsible">Assignment-1 (Organisational Thinking)</button>
+	<div class="content">
+		These assignments are based on Organisational Thinking notes.<br><br>
+		<a href="pdf/A/1.png">Question 1</a>
+		<a href="pdf/A/1a.png">		Ans 1</a>
+		<br><br><a href="pdf/A/2.png">Question 2</a>
+		<a href="pdf/A/2a.png">		Ans 2</a>
+		<br><br><a href="pdf/A/3.png">Question 3</a>
+                <br><br><a href="pdf/A/4.png">Question 4</a>
+		<a href="pdf/A/4a.png">		Ans 4</a>
+		<br><br><a href="pdf/A/5.png">Question 5</a>
+		<a href="pdf/A/5a.png">		Ans 5</a>
+	</div>
+ <br>
+
+<button class="collapsible">Assignment-2 (Analytical Thinking)</button>
+	<div class="content">
+		Notes on these assignments are provided in Questions.<br><br>
+		<a href="pdf/A/Analysing Pattern.pdf">Question 1</a>(Analysing Pattern)
+		<a href="pdf/A/APa.png">		Ans 1</a>
+		</div>
+ <br>
+
+<button class="collapsible">Assignment-3 (Evaluative Thinking)</button>
+	<div class="content">
+		Notes on these assignments are provided in Questions.<br><br>	
+		<a href="pdf/A/Facts and Opinions.pdf">Question 1</a>(Facts and Opinions)
+		<a href="pdf/A/FOa.png">		Ans 1</a>
+		<br><br><a href="pdf/A/Reliability Of Claim.pdf">Question 2</a>(Reliability Of Claim)
+		<a href="pdf/A/ROCa.png">		Ans 2</a>
+		<br><br><a href="pdf/A/Decision Making.pdf">Question 3</a>(Decision Making)
+		<a href="pdf/A/DMa.png">		Ans 3</a>
+		<br><br><a href="pdf/A/Others view.pdf">Question 4</a>(Others view)
+		<a href="pdf/A/OVa.png">		Ans 4</a>
+		<br><br><a href="pdf/A/Ask Questions.pdf">Question 5</a>(Ask Questions)
+		<a href="pdf/A/AQa.png">		Ans 5</a>
+	</div>
+ <br>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+  </body>
+
+</html>

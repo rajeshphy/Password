@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;  /* Center-align the content */
+    }
+
+    .premium-heading {
+      background-color: #001F3F; /* Deep blue for heading */
+      color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .button-container {
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .main-button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .main-button:hover {
+      background-color: #555;
+    }
+
+    .nested-buttons {
+      display: none;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .nested-button {
+      background-color: #ddd;
+      color: #333;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .nested-button:hover {
+      background-color: #ccc;
+    }
+
+    .nested-box {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .nested-link {
+      display: block;
+      margin: 5px;
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #FFD700; /* Subtle gold for footer */
+      color: #333;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<div class="premium-heading">
+  <h1>Scientific</h1>
+</div>
+
+<!-- Physics-Mathematics -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(1)">Physics-Mathematics</button>
+  
+  <div class="nested-buttons" id="nestedButtons1">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 0)">
+      Equations-formulas
+    </button>
+
+    <div class="nested-box" id="nestedBox1_0">
+
+      <a class="nested-link" href="FOLDER/Physics-Mathematics/Equations-formulas/link1.pdf" target="_blank">Link 1</a>
+
+      <a class="nested-link" href="FOLDER/Physics-Mathematics/Equations-formulas/link2.pdf" target="_blank">Link 2</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 1)">
+      Theoretical-concepts
+    </button>
+
+    <div class="nested-box" id="nestedBox1_1">
+
+      <a class="nested-link" href="FOLDER/Physics-Mathematics/Theoretical-concepts/link3.pdf" target="_blank">Link 3</a>
+
+      <a class="nested-link" href="FOLDER/Physics-Mathematics/Theoretical-concepts/link4.pdf" target="_blank">Link 4</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 2)">
+      Calculations-derivations
+    </button>
+
+    <div class="nested-box" id="nestedBox1_2">
+
+      <a class="nested-link" href="FOLDER/Physics-Mathematics/Calculations-derivations/link5.pdf" target="_blank">Link 5</a>
+
+      <a class="nested-link" href="FOLDER/Physics-Mathematics/Calculations-derivations/link6.pdf" target="_blank">Link 6</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Scientific-Observations -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(2)">Scientific-Observations</button>
+  
+  <div class="nested-buttons" id="nestedButtons2">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(2, 0)">
+      Experiment
+    </button>
+
+    <div class="nested-box" id="nestedBox2_0">
+
+      <a class="nested-link" href="FOLDER/Scientific-Observations/Experiment/link7.pdf" target="_blank">Link 7</a>
+
+      <a class="nested-link" href="FOLDER/Scientific-Observations/Experiment/link8.pdf" target="_blank">Link 8</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(2, 1)">
+      Observations
+    </button>
+
+    <div class="nested-box" id="nestedBox2_1">
+
+      <a class="nested-link" href="FOLDER/Scientific-Observations/Observations/link9.pdf" target="_blank">Link 9</a>
+
+      <a class="nested-link" href="FOLDER/Scientific-Observations/Observations/link10.pdf" target="_blank">Link 10</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Lecture-Notes -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(3)">Lecture-Notes</button>
+  
+  <div class="nested-buttons" id="nestedButtons3">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(3, 0)">
+      Physics
+    </button>
+
+    <div class="nested-box" id="nestedBox3_0">
+
+      <a class="nested-link" href="FOLDER/Lecture-Notes/Physics/link11.pdf" target="_blank">Link 11</a>
+
+      <a class="nested-link" href="FOLDER/Lecture-Notes/Physics/link12.pdf" target="_blank">Link 12</a>
+
+    </div>
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(3, 1)">
+      Maths
+    </button>
+
+    <div class="nested-box" id="nestedBox3_1">
+
+      <a class="nested-link" href="FOLDER/Lecture-Notes/Maths/link13.pdf" target="_blank">Link 13</a>
+
+      <a class="nested-link" href="FOLDER/Lecture-Notes/Maths/link14.pdf" target="_blank">Link 14</a>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-content">
+    <p class="credit">&#169; 2023 design by <a href="https://rajeshphy.github.io" target="_blank">Rajesh Kumar</a></p>
+  </div>
+</div>
+
+<script>
+  function toggleNestedButtons(buttonNumber) {
+    var nestedButtons = document.getElementById('nestedButtons' + buttonNumber);
+
+    // Toggle the display property
+    if (nestedButtons.style.display === 'none') {
+      nestedButtons.style.display = 'block';
+    } else {
+      nestedButtons.style.display = 'none';
+    }
+  }
+
+  function toggleNestedBox(mainButton, nestedButton) {
+    var nestedBox = document.getElementById('nestedBox' + mainButton + '_' + nestedButton);
+
+    // Toggle the display property
+    if (nestedBox.style.display === 'none') {
+      nestedBox.style.display = 'block';
+    } else {
+      nestedBox.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Course Website: Lectures</title>
+  <link rel="stylesheet" href="/_css/main.css">
+  <link rel="canonical" href="http://course-website.svmiller.com/lectures/">
+  <link rel="alternate" type="application/rss+xml" title="Course Website" href="http://course-website.svmiller.com/feed.xml" />
+
+<style>
+  
+img {
+
+object-fit: contain;
+}
+  
+  
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 300px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  width: 280px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+
+</head>
+
+
+  <body>
+
+    <h1 class="post-title">Notes</h1>
+  
+<p>
+Click on the button below to see the notes.
+</p>
+
+<p><strong>Module I:</strong></p>
+
+<button class="collapsible">Organisational Thinking Notes</button>
+	<div class="content">
+		<br>
+		* <a href="pdf/N/Categorising.pdf"> Categorising.pdf</a>
+		<br><br>
+		* <a href="pdf/N/Concepts.pdf"> Concepts.pdf</a>
+		<br><br>
+	</div> 
+	  <br><br>
+Analytical & Evaluative thinking notes are provided with Assignments. Once check assignments.
+
+
+
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+  </body>
+
+</html>
